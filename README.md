@@ -1,8 +1,11 @@
-# badideas
+# Windows Softening
 
-Welcome to the **badideas** repository! This repo contains PowerShell scripts that perform some rather questionable actions, specifically aimed at disabling Windows Updates and Windows Defender. Use these scripts with caution and be fully aware of the security implications.
+This repo contains PowerShell scripts that perform some rather questionable actions, specifically aimed at softening a windows image by  disabling Windows Updates and Windows Defender, UAC, Firewall, etc. Use these scripts with extreme caution and be fully aware of the security implications.
 
 ## Scripts
+### 0. `Soften.ps1`
+
+This script is the combination of all other scripts executed in one go.
 
 ### 1. `DisableWinUpdates.ps1`
 
@@ -12,9 +15,11 @@ This script permanently disables Windows Updates by stopping the relevant servic
 
 This script modifies the Windows Registry to permanently disable Windows Defender, including its real-time protection features. The script creates necessary registry keys and sets values to disable various Defender functionalities.
 
-## PowerShell One-Liner
+### 3. `DisableWinFW.ps1`
 
-If you're feeling adventurous (or reckless), here's a one-liner that will download and execute both scripts directly from this repository:
 
-```powershell
-iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/jsonsec/badideas/main/DisableWinUpdates.ps1')); iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/yourusername/badideas/main/DisableWinDefender.ps1'))
+### 4. `DisableUAC.ps1`
+
+
+### 5. `DisableExecutionPolicy.ps1`
+
