@@ -1,0 +1,2 @@
+# Disable Windows Firewall for all profiles (Domain, Private, and Public)
+Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
